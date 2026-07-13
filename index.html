@@ -1,1 +1,727 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavik Shah | CTO, Technical Director & Enterprise SaaS Architect</title>
+    
+    <!-- Search Engine Optimization (SEO) Metadata -->
+    <meta name="description" content="Professional portfolio of Bhavik Shah, Technical Director at Druva, former CTO & Founder. Over 23 years scaling enterprise SaaS, multi-tenant cloud architectures, and leading GenAI developer initiatives. BITS Pilani & COEP alumnus.">
+    <meta name="keywords" content="Bhavik Shah, CTO, Technical Director, Chief Architect, Druva, SaaS Architecture, GenAI, Model Context Protocol, MCP, AWS Redshift, Multi-tenant Cloud, BITS Pilani, COEP Pune, Pune tech leader">
+    <meta name="author" content="Bhavik Shah">
+    <link rel="canonical" href="https://bhavik1st.github.io/">
+
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Bhavik Shah | CTO, Technical Director & Enterprise SaaS Architect">
+    <meta property="og:description" content="Technical Director at Druva and Ex-CTO with 23+ years of expertise in high-scale cloud-native SaaS, multi-tenant infrastructures, and GenAI strategic execution.">
+    <meta property="og:url" content="https://linkedin.com/in/bhavik1st">
+    <meta property="og:image" content="watermarked_img_2858305047455329887.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bhavik Shah | Technical Leader & Cloud Strategist">
+    <meta name="twitter:description" content="Explore Bhavik Shah's executive technical portfolio, highlighting enterprise architecture, multi-million dollar optimizations, and AI leadership.">
+    <meta name="twitter:image" content="watermarked_img_2858305047455329887.png">
+
+    <!-- JSON-LD Structured Data for Search Engine Crawlers -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Bhavik Shah",
+      "jobTitle": "Technical Director",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Druva"
+      },
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "BITS Pilani"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Government College of Engineering, Pune (COEP)"
+        }
+      ],
+      "url": "https://linkedin.com/in/bhavik1st",
+      "sameAs": [
+        "https://linkedin.com/in/bhavik1st",
+        "https://github.com/bhavik1st"
+      ],
+      "knowsAbout": [
+        "Software Architecture",
+        "Cloud Computing",
+        "Generative AI",
+        "Model Context Protocol",
+        "SaaS Scale",
+        "Multi-tenancy",
+        "System Re-engineering"
+      ]
+    }
+    </script>
+
+    <!-- Tailwind CSS & FontAwesome Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Font Connection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            transition: background-color 0.4s ease, color 0.4s ease;
+            min-height: 100vh;
+        }
+
+        /* Ambient animated backgrounds matching user state preferences */
+        .bg-gradient-light {
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0, #f8fafc);
+            background-size: 200% 200%;
+            animation: moveGradient 12s ease infinite;
+        }
+
+        .dark .bg-gradient-dark {
+            background: linear-gradient(135deg, #0f172a, #1e1b4b, #0f172a);
+            background-size: 200% 200%;
+            animation: moveGradient 12s ease infinite;
+        }
+
+        @keyframes moveGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Standardized Premium Glass Panels */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .dark .glass-panel {
+            background: rgba(15, 23, 42, 0.45);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.35);
+        }
+
+        .glass-card-interactive:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.65);
+            box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.08);
+        }
+
+        .dark .glass-card-interactive:hover {
+            background: rgba(30, 41, 59, 0.6);
+            box-shadow: 0 20px 48px -6px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Abstract Glow Effects */
+        .glow-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+        .orb-blue {
+            width: 400px;
+            height: 400px;
+            background: rgba(14, 165, 233, 0.15);
+            top: 10%;
+            left: -100px;
+        }
+        .orb-indigo {
+            width: 500px;
+            height: 500px;
+            background: rgba(99, 102, 241, 0.12);
+            bottom: 10%;
+            right: -150px;
+        }
+
+        .dark .orb-blue { background: rgba(14, 165, 233, 0.06); }
+        .dark .orb-indigo { background: rgba(99, 102, 241, 0.05); }
+
+        /* Print formatting */
+        @media print {
+            .glow-orb, .print-hidden, #themeToggle, .nav-sticky {
+                display: none !important;
+            }
+            body {
+                background: #ffffff !important;
+                color: #000000 !important;
+            }
+            .glass-panel {
+                background: none !important;
+                backdrop-filter: none !important;
+                border: none !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin-bottom: 2rem !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-light dark:bg-gradient-dark text-slate-800 dark:text-slate-200 antialiased transition-colors duration-300">
+
+    <!-- Background decorative blur elements -->
+    <div class="glow-orb orb-blue"></div>
+    <div class="glow-orb orb-indigo"></div>
+
+    <!-- Floating Responsive Navigation Header -->
+    <nav class="print-hidden sticky top-0 z-50 w-full glass-panel border-b border-white/20 dark:border-white/5 py-4 px-6 md:px-12 flex justify-between items-center transition-all">
+        <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-brand-500 to-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-md">
+                BS
+            </div>
+            <div>
+                <span class="font-extrabold tracking-tight text-slate-900 dark:text-white block text-sm sm:text-base leading-none">Bhavik Shah</span>
+                <span class="text-[10px] text-brand-600 dark:text-brand-400 font-bold tracking-wider uppercase">Executive Portal</span>
+            </div>
+        </div>
+        
+        <!-- Document Hyperlinks / Fixed Nav Anchors -->
+        <div class="hidden md:flex items-center gap-6">
+            <a href="#summary" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 transition-colors">About</a>
+            <a href="#skills" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 transition-colors">Competencies</a>
+            <a href="#experience" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 transition-colors">Experience</a>
+            <a href="#sandbox" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 transition-colors">GenAI Sandbox</a>
+            <a href="#education" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 transition-colors">Education & Credentials</a>
+        </div>
+        
+        <div class="flex items-center gap-4">
+            <!-- Social SEO-Friendly Links -->
+            <a href="https://linkedin.com/in/bhavik1st" target="_blank" rel="noopener noreferrer" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-lg" aria-label="Bhavik Shah LinkedIn Profile">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/bhavik1st" target="_blank" rel="noopener noreferrer" class="text-slate-600 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white transition-colors text-lg" aria-label="Bhavik Shah GitHub Repository">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <span class="h-6 w-px bg-slate-300 dark:bg-slate-700 hidden sm:inline-block"></span>
+            
+            <!-- Standard Theme Toggle Component -->
+            <button id="themeToggle" class="p-2 rounded-xl bg-white/50 dark:bg-slate-800/50 hover:scale-105 active:scale-95 transition-all text-slate-700 dark:text-yellow-400 border border-slate-200 dark:border-slate-700" aria-label="Toggle interface color scheme">
+                <i id="themeToggleLightIcon" class="fa-solid fa-moon text-lg dark:hidden"></i>
+                <i id="themeToggleDarkIcon" class="fa-solid fa-sun text-lg hidden dark:block"></i>
+            </button>
+            
+            <!-- Reference PDF Trigger -->
+            <a href="Bhavik Shah Resume July 2026 - Google Docs.pdf" target="_blank" class="hidden sm:flex items-center gap-2 bg-gradient-to-r from-brand-500 to-indigo-600 hover:opacity-90 active:scale-95 text-white px-4 py-2 rounded-xl text-xs font-bold shadow-md transition-all">
+                <i class="fa-solid fa-file-pdf"></i>
+                Download Resume
+            </a>
+        </div>
+    </nav>
+
+    <!-- Executive Profile Main Layout -->
+    <main class="max-w-6xl mx-auto px-4 py-8 sm:px-6 lg:px-8 relative z-10 flex flex-col gap-8">
+        
+        <!-- Hero Profile Identity Header block -->
+        <header id="summary" class="glass-panel rounded-3xl p-6 sm:p-10 relative overflow-hidden flex flex-col gap-8 md:flex-row md:items-center md:justify-between scroll-mt-24">
+            <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-brand-400 via-indigo-500 to-purple-500"></div>
+            
+            <div class="flex flex-col sm:flex-row items-center gap-6">
+                <!-- Profile Image Frame utilizing 'my pic latest' profile photo context -->
+                <div class="relative group shrink-0">
+                    <div class="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-brand-500 via-indigo-600 to-purple-500 blur opacity-40 group-hover:opacity-75 transition duration-500"></div>
+                    <div class="relative h-32 w-32 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center border-2 border-white/50 dark:border-slate-800 overflow-hidden shadow-inner">
+                        <!-- Direct profile image loaded from workspace references -->
+                        <img id="avatar-image" src="watermarked_img_2858305047455329887.png" alt="Bhavik Shah Portrait" class="h-full w-full object-cover" onerror="this.style.display='none'; document.getElementById('avatar-fallback').classList.remove('hidden');">
+                        
+                        <!-- Standard Backup Framework placeholder -->
+                        <div id="avatar-fallback" class="hidden flex flex-col items-center justify-center">
+                            <i class="fa-solid fa-user-tie text-5xl text-indigo-500/80"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center sm:text-left">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">Bhavik Shah</h1>
+                    <p class="text-lg font-bold text-brand-600 dark:text-brand-400 mt-1">Technical Leader | Ex-CTO | Entrepreneur</p>
+                    <p class="text-sm font-semibold text-slate-500 dark:text-slate-400 flex items-center justify-center sm:justify-start gap-2 mt-1.5">
+                        <i class="fa-solid fa-location-dot"></i> Pune, India
+                    </p>
+                    
+                    <!-- Direct Dynamic Contacts Grid -->
+                    <div class="mt-4 flex flex-wrap justify-center sm:justify-start gap-3">
+                        <a href="mailto:bhavik1st@gmail.com" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-white/40 dark:bg-slate-800/40 border border-white/60 dark:border-white/5 hover:border-indigo-400 transition-colors">
+                            <i class="fa-solid fa-envelope mr-1 text-indigo-500"></i> bhavik1st@gmail.com
+                        </a>
+                        <a href="tel:+919270369032" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-white/40 dark:bg-slate-800/40 border border-white/60 dark:border-white/5 hover:border-brand-400 transition-colors">
+                            <i class="fa-solid fa-phone mr-1 text-brand-500"></i> +91 9270369032
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Summary highlights -->
+            <div class="max-w-xl text-slate-700 dark:text-slate-300 text-sm md:text-base leading-relaxed border-t border-slate-300/30 dark:border-slate-800/30 pt-4 md:border-t-0 md:pt-0">
+                <p>
+                    Technology executive with <strong>23+ years leading architecture, platform engineering, and cloud transformation</strong> across enterprise SaaS systems and high-growth startups with multi-million dollar ARR. Adept at turning corporate vision and requirements into technical roadmap execution. 
+                </p>
+                <p class="mt-2 text-xs border-l-2 border-brand-500 pl-3 italic text-slate-600 dark:text-slate-400">
+                    Google Certified AI Professional & Generative AI Leader. Implementing Model Context Protocol (MCP), LLM orchestrations, and spec-driven workflows to modernize application footprints.
+                </p>
+            </div>
+        </header>
+
+        <!-- Core Competencies Block -->
+        <section id="skills" class="glass-panel rounded-3xl p-6 sm:p-10 scroll-mt-24">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
+                <i class="fa-solid fa-shapes text-brand-500"></i> Core Competencies
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Skill Group 1 -->
+                <div class="p-5 rounded-2xl bg-white/10 dark:bg-slate-800/10 border border-white/30 dark:border-white/5">
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-4 border-b border-slate-200 dark:border-slate-800 pb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-user-gear text-brand-500"></i> Technical Leadership
+                    </h3>
+                    <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-brand-500 mt-1 text-xs"></i> Strategic Tech Vision & Roadmaps</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-brand-500 mt-1 text-xs"></i> Scaling Multi-Disciplinary Orgs (50+ Engineers)</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-brand-500 mt-1 text-xs"></i> Architecture Governance & TCO Models</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-brand-500 mt-1 text-xs"></i> Requirement-to-MVP Execution Alignment</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Group 2 -->
+                <div class="p-5 rounded-2xl bg-white/10 dark:bg-slate-800/10 border border-white/30 dark:border-white/5">
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-4 border-b border-slate-200 dark:border-slate-800 pb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-code text-indigo-500"></i> Architecture & Frameworks
+                    </h3>
+                    <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-indigo-500 mt-1 text-xs"></i> Inception-to-Scale (0-to-1 & 1-to-100)</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-indigo-500 mt-1 text-xs"></i> Build vs. Buy vs. ReUse Decision Matrices</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-indigo-500 mt-1 text-xs"></i> Tactical vs. Strategic Platform Trade-offs</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-indigo-500 mt-1 text-xs"></i> Simplifying Deep-Tech concepts for Board Level</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Group 3 -->
+                <div class="p-5 rounded-2xl bg-white/10 dark:bg-slate-800/10 border border-white/30 dark:border-white/5">
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-4 border-b border-slate-200 dark:border-slate-800 pb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-brain text-purple-500"></i> Cloud & GenAI Platforms
+                    </h3>
+                    <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-purple-500 mt-1 text-xs"></i> Google Certified AI Professional Execution</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-purple-500 mt-1 text-xs"></i> Prompt & Context Engineering Pipelines</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-purple-500 mt-1 text-xs"></i> Model Context Protocol (MCP) Infrastructures</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-purple-500 mt-1 text-xs"></i> Cloud Native: AWS, Azure, GCP, K8s, Python</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work History Timeline -->
+        <section id="experience" class="glass-panel rounded-3xl p-6 sm:p-10 flex flex-col gap-6 scroll-mt-24">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
+                <i class="fa-solid fa-briefcase text-brand-500"></i> Professional Experience
+            </h2>
+            
+            <div class="space-y-8 relative before:absolute before:inset-0 before:right-auto before:left-3.5 before:w-0.5 before:bg-slate-300 dark:before:bg-slate-800 pl-8">
+                
+                <!-- Druva Experience Card -->
+                <div class="relative">
+                    <span class="absolute -left-[29px] top-1.5 bg-brand-500 border-4 border-slate-100 dark:border-slate-950 h-5 w-5 rounded-full ring-4 ring-brand-500/20"></span>
+                    
+                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Technical Director</h3>
+                            <div class="text-brand-600 dark:text-brand-400 font-semibold text-sm">Druva</div>
+                        </div>
+                        <span class="bg-indigo-500/10 dark:bg-indigo-400/10 text-indigo-600 dark:text-indigo-400 font-bold px-3 py-1.5 rounded-full text-xs mt-1 md:mt-0">
+                            Feb 2022 - Present | Pune, India
+                        </span>
+                    </div>
+                    
+                    <p class="text-sm italic text-slate-500 dark:text-slate-400 mb-4">
+                        Leading architectural direction and technical strategy for the Druva Control Plane (DCP) common foundation frameworks and Managed Service Provider (MSP) network scaling.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-xl bg-slate-500/5 border border-slate-300/30 dark:border-slate-800">
+                            <span class="font-bold text-indigo-600 dark:text-indigo-400 block mb-1">MSP Platforms Scalability (Multi-Tenant Growth)</span>
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                                Architected core multi-tenant MSP strategies, scaling platform operations from <strong>under $1M to $11M in revenue</strong>. Managed growth footprints from <strong>20 to over 200 partners (controlling 2,000+ active tenants)</strong>, isolating and decoupling microservices to minimize inter-team delivery bottlenecks. Conceptualized and created a proof-of-concept Model Context Protocol (MCP) server integration showcase for partner deployments.
+                            </p>
+                        </div>
+                        
+                        <div class="p-4 rounded-xl bg-slate-500/5 border border-slate-300/30 dark:border-slate-800">
+                            <span class="font-bold text-brand-600 dark:text-brand-400 block mb-1">DCP Foundation Infrastructure & Licensing Modernizations</span>
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                                Directed architectural engineering across all standard foundational services, driving Identity, SSO, MFA, Customer and License management architectures, and secure subscription services tied to <strong>$150M+ in Annual Recurring Revenue (ARR)</strong>. Re-engineered core telemetry and reporting pipelines away from costly third-party frameworks, **saving over $1M in software licensing and host resource costs over 4 years**. Successfully integrated an automated, conversational GenAI chatbot assistant, reducing support ticket loads by **40%**.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Silverbullet Experience Card -->
+                <div class="relative">
+                    <span class="absolute -left-[29px] top-1.5 bg-indigo-500 border-4 border-slate-100 dark:border-slate-950 h-5 w-5 rounded-full ring-4 ring-indigo-500/20"></span>
+                    
+                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Chief Architect</h3>
+                            <div class="text-brand-600 dark:text-brand-400 font-semibold text-sm">1Silverbullet Platforms Pvt. Ltd. (now 9Platforms Technology)</div>
+                        </div>
+                        <span class="bg-indigo-500/10 dark:bg-indigo-400/10 text-indigo-600 dark:text-indigo-400 font-bold px-3 py-1.5 rounded-full text-xs mt-1 md:mt-0">
+                            Mar 2021 - Feb 2022 | Pune, India
+                        </span>
+                    </div>
+
+                    <p class="text-sm italic text-slate-500 dark:text-slate-400 mb-3">
+                        Spearheaded zero-to-one architectural execution, team blueprints, and engineering rules for a high-volume B2B FinTech and InsureTech gateway framework.
+                    </p>
+
+                    <ul class="list-none space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-chevron-right text-indigo-500 mt-1"></i>
+                            <span><strong>Zero-to-One Architecture:</strong> Formulated an efficient serverless API infrastructure utilizing AWS Lambda, API Gateway, and ECS/Fargate pipelines, handling complex transaction loads securely.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-chevron-right text-indigo-500 mt-1"></i>
+                            <span><strong>Configuration-Driven Ingestion:</strong> Crafted a metadata transformation pipeline that enabled instant integrations, reducing new partner onboarding times <strong>from months down to mere days</strong>.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Susthitsoft Experience Card -->
+                <div class="relative">
+                    <span class="absolute -left-[29px] top-1.5 bg-purple-500 border-4 border-slate-100 dark:border-slate-950 h-5 w-5 rounded-full ring-4 ring-purple-500/20"></span>
+                    
+                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">CTO & Founder</h3>
+                            <div class="text-brand-600 dark:text-brand-400 font-semibold text-sm">SusthitSoft Technologies Private Limited</div>
+                        </div>
+                        <span class="bg-indigo-500/10 dark:bg-indigo-400/10 text-indigo-600 dark:text-indigo-400 font-bold px-3 py-1.5 rounded-full text-xs mt-1 md:mt-0">
+                            May 2018 - Feb 2021 | Pune, India
+                        </span>
+                    </div>
+
+                    <p class="text-sm italic text-slate-500 dark:text-slate-400 mb-3">
+                        Founded company and led direct technical development of low-code/no-code application generation ecosystems.
+                    </p>
+
+                    <ul class="list-none space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-chevron-right text-purple-500 mt-1"></i>
+                            <span><strong>APPKARO & EZYBAAS Platforms:</strong> Architected dual pipelines that automatically generated SQL-driven backends and compiled native mobile structures using Google Cloud Functions, Firebase, and Docker systems.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-chevron-right text-purple-500 mt-1"></i>
+                            <span><strong>Frugal Operations:</strong> Established standard 12-factor application profiles to drop operational computing spend, ensuring platform integrity during sudden load peaks.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Veritas Experience Card -->
+                <div class="relative">
+                    <span class="absolute -left-[29px] top-1.5 bg-blue-500 border-4 border-slate-100 dark:border-slate-950 h-5 w-5 rounded-full ring-4 ring-blue-500/20"></span>
+                    
+                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Principal Software Engineer</h3>
+                            <div class="text-brand-600 dark:text-brand-400 font-semibold text-sm">Veritas Technologies LLC (Formerly Symantec)</div>
+                        </div>
+                        <span class="bg-indigo-500/10 dark:bg-indigo-400/10 text-indigo-600 dark:text-indigo-400 font-bold px-3 py-1.5 rounded-full text-xs mt-1 md:mt-0">
+                            Aug 2010 - Mar 2018 | Pune, India
+                        </span>
+                    </div>
+
+                    <ul class="list-none space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-chevron-right text-blue-500 mt-1"></i>
+                            <span><strong>SMTP Archiving Engine:</strong> Formulated, coded, and deployed automated email archiving subsystems inside Enterprise Vault products, awarded top Level-4 global engineering quality recognition.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-chevron-right text-blue-500 mt-1"></i>
+                            <span><strong>Publication & Papers:</strong> Drafted and logged multi-level technical disclosures detailing programmatic data leakage prevention (DLP) frameworks monitoring metadata.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-chevron-right text-blue-500 mt-1"></i>
+                            <span><strong>Service templates:</strong> Created reusable service templates that dropped custom storage connector cycle times <strong>from months down to a few days</strong>.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Early Career Summary Card -->
+                <div class="relative">
+                    <span class="absolute -left-[29px] top-1.5 bg-slate-400 border-4 border-slate-100 dark:border-slate-950 h-5 w-5 rounded-full ring-4 ring-slate-400/20"></span>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Early Career History (2002 – 2010)</h3>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 rounded-xl bg-slate-500/5 border border-slate-300/30 dark:border-slate-800">
+                            <span class="font-bold text-slate-900 dark:text-white block text-sm">KPIT Cummins | Associate Solution Architect</span>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                                Managed a legacy 1M+ LOC system (C++, Java, .NET). Optimized embedded real-time OS performance (QNX RTOS), reducing peak CPU from 80% to 60% and boot times from 10 minutes to 5 seconds.
+                            </p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-500/5 border border-slate-300/30 dark:border-slate-800">
+                            <span class="font-bold text-slate-900 dark:text-white block text-sm">SAP Labs India | Development Specialist</span>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                                Developed the APO Grid Control feature for SCM 5.0 and prototyped advanced Explanation Controls for SAP SmartClients (Netweaver); rated top-tier 'STAR' performer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Interactive Technology Sandbox Block -->
+        <section id="sandbox" class="print-hidden glass-panel rounded-3xl p-6 sm:p-10 bg-gradient-to-br from-indigo-500/5 via-transparent to-brand-500/5 scroll-mt-24">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-3">
+                <i class="fa-solid fa-wand-magic-sparkles text-indigo-500"></i> Interactive Playground
+            </h2>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-6">
+                Interact with modeled scenarios depicting actual architectural optimizations implemented during Bhavik's leadership stints.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Sandbox Tool 1: Interactive ROI Tool -->
+                <div class="p-5 rounded-2xl bg-white/40 dark:bg-slate-800/40 border border-white/60 dark:border-white/5 flex flex-col gap-4">
+                    <span class="font-bold text-slate-900 dark:text-white text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-calculator text-brand-500"></i> Platform Optimization ROI Calculator
+                    </span>
+                    
+                    <div class="flex flex-col gap-2">
+                        <label class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Select Optimization Metric:</label>
+                        <select id="roiScenario" onchange="updateROISandbox()" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-xs font-semibold">
+                            <option value="reporting">DCP Reporting Infrastructure Re-arch (Redshift Migration)</option>
+                            <option value="chatbot">GenAI Conversational Chatbot Integration</option>
+                            <option value="silverbullet">Silverbullet Configuration-Driven API Gateway</option>
+                        </select>
+                    </div>
+
+                    <!-- Sandbox Computed Stats -->
+                    <div class="grid grid-cols-2 gap-4 mt-2">
+                        <div class="p-3.5 rounded-xl bg-brand-500/10 border border-brand-500/20 text-center">
+                            <span class="text-[10px] text-slate-500 dark:text-slate-400 block font-bold uppercase tracking-wider">Measured Benefit</span>
+                            <span id="roiBenefit" class="text-base font-extrabold text-slate-900 dark:text-white">-</span>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-center">
+                            <span class="text-[10px] text-slate-500 dark:text-slate-400 block font-bold uppercase tracking-wider">Performance Uplift</span>
+                            <span id="roiDelta" class="text-base font-extrabold text-slate-900 dark:text-white">-</span>
+                        </div>
+                    </div>
+
+                    <p id="roiDescription" class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed italic bg-slate-100 dark:bg-slate-900/30 p-3 rounded-lg border border-slate-200 dark:border-slate-800">
+                        Select an engineering scenario to trace system efficiencies.
+                    </p>
+                </div>
+
+                <!-- Sandbox Tool 2: Interactive MCP Router -->
+                <!-- <div class="p-5 rounded-2xl bg-white/40 dark:bg-slate-800/40 border border-white/60 dark:border-white/5 flex flex-col gap-4">
+                    <span class="font-bold text-slate-900 dark:text-white text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-network-wired text-purple-500"></i> Model Context Protocol (MCP) Router Simulator
+                    </span>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Query standard MCP resource routes mimicking the setup demonstrated during the MSP Forum Meet.
+                    </p>
+
+                    <div class="flex items-center gap-2">
+                        <button onclick="triggerMCPTool('cam')" class="flex-1 py-2 px-2 text-[10px] font-bold text-center bg-brand-500 text-white rounded-lg hover:scale-102 transition-transform shadow-sm">
+                            CAM API
+                        </button>
+                        <button onclick="triggerMCPTool('billing')" class="flex-1 py-2 px-2 text-[10px] font-bold text-center bg-indigo-500 text-white rounded-lg hover:scale-102 transition-transform shadow-sm">
+                            Firebird Meter
+                        </button>
+                        <button onclick="triggerMCPTool('backup')" class="flex-1 py-2 px-2 text-[10px] font-bold text-center bg-purple-500 text-white rounded-lg hover:scale-102 transition-transform shadow-sm">
+                            MSP Tenants
+                        </button>
+                    </div>
+
+                    <div class="p-3 rounded-xl bg-slate-950 font-mono text-xs text-emerald-400 min-h-[90px] border border-slate-800 flex flex-col justify-end">
+                        <div id="mcpConsoleLine1" class="text-slate-500">// MCP Router logs output</div>
+                        <div id="mcpConsoleLine2" class="mt-1">&gt; Standard console interface initialized... Ready.</div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- Credentials, Published Works, & Education Block -->
+        <section id="education" class="grid grid-cols-1 md:grid-cols-2 gap-8 scroll-mt-24">
+            
+            <!-- Academic Credentials -->
+            <div class="glass-panel rounded-3xl p-6 sm:p-10">
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3 border-b border-slate-200 dark:border-slate-800 pb-3">
+                    <i class="fa-solid fa-graduation-cap text-indigo-500"></i> Education
+                </h2>
+                
+                <div class="space-y-6">
+                    <div class="relative pl-6 before:absolute before:left-0 before:top-2 before:h-2 before:w-2 before:bg-brand-500 before:rounded-full">
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Master of Science, Software Systems</h3>
+                        <div class="text-brand-600 dark:text-brand-400 font-bold text-sm">BITS Pilani | 2011 – 2013</div>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                            Work-Integrated Learning Programs (WILP) focusing on high-scale distributed designs and microservice architectures. <strong class="text-slate-800 dark:text-slate-200">CGPA: 8.79</strong>
+                        </p>
+                    </div>
+
+                    <div class="relative pl-6 before:absolute before:left-0 before:top-2 before:h-2 before:w-2 before:bg-brand-500 before:rounded-full">
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Bachelor of Engineering, Computer Engineering</h3>
+                        <div class="text-brand-600 dark:text-brand-400 font-bold text-sm">COEP Pune | 1998 – 2002</div>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                            Foundational software engineering degree from Pune's premier engineering institute.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Publications & Certs -->
+            <div class="glass-panel rounded-3xl p-6 sm:p-10">
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3 border-b border-slate-200 dark:border-slate-800 pb-3">
+                    <i class="fa-solid fa-award text-purple-500"></i> Credentials & Publications
+                </h2>
+
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-shield-halved text-purple-500 mt-1"></i>
+                        <div>
+                            <strong class="text-slate-900 dark:text-white">Google Certified AI Professional & GenAI Leader</strong>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Formal industry specialization verifying strategic management of enterprise LLM application patterns.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-file-invoice text-indigo-500 mt-1"></i>
+                        <div>
+                            <strong class="text-slate-900 dark:text-white">Publication & Papers: Data Leak Prevention</strong>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">
+                                Published comprehensive research mapping active file parameters directly onto DLP audit registries for automated mitigation rules.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-envelope-open-text text-brand-500 mt-1"></i>
+                        <div>
+                            <strong class="text-slate-900 dark:text-white">Architectural Recipes (Newsletter)</strong>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Author of the technical publication newsletter with over 700+ active engineering subscribers.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Page Footer -->
+        <footer class="print-hidden text-center text-xs text-slate-500 dark:text-slate-400 py-8 border-t border-slate-300/30 dark:border-slate-800/30">
+            <p>Designed with glassmorphic principles & structured for optimal SEO and parser compatibility.</p>
+            <p class="mt-1 font-semibold text-brand-500">Bhavik Shah © 2026</p>
+        </footer>
+
+    </main>
+
+    <!-- Script Logic Handler for Theme Management and Interactive Tools -->
+    <script>
+        // Init state configurations instantly on load
+        window.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            updateROISandbox();
+        });
+
+        // Fail-Safe Theme Management Supporting Automatic Preferences & LocalStorage cache
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+
+        function initTheme() {
+            // Check localStorage cache first, then default to system configuration preference
+            const cachedTheme = localStorage.getItem('theme-preference');
+            if (cachedTheme) {
+                if (cachedTheme === 'dark') {
+                    htmlElement.classList.add('dark');
+                } else {
+                    htmlElement.classList.remove('dark');
+                }
+            } else {
+                const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (systemPrefersDark) {
+                    htmlElement.classList.add('dark');
+                } else {
+                    htmlElement.classList.remove('dark');
+                }
+            }
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme-preference', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme-preference', 'dark');
+            }
+        });
+
+        // Sandbox Tool 1: Interactive ROI Scenarios
+        function updateROISandbox() {
+            const scenario = document.getElementById('roiScenario').value;
+            const benefitEl = document.getElementById('roiBenefit');
+            const deltaEl = document.getElementById('roiDelta');
+            const descEl = document.getElementById('roiDescription');
+
+            if (scenario === 'reporting') {
+                benefitEl.innerText = "$1M+ Saved";
+                deltaEl.innerText = "Eliminated 3rd Party Fees";
+                descEl.innerText = "Replaced costly proprietary analytics with robust, structured AWS Redshift platforms, removing expensive licenses entirely and enhancing query processing limits.";
+            } else if (scenario === 'chatbot') {
+                benefitEl.innerText = "40% Support Reduction";
+                deltaEl.innerText = "Accelerated Time-to-Fix";
+                descEl.innerText = "Deployed direct conversational AI assistants inside standard software channels, automating tier-1 issue routing paths without manual staff workloads.";
+            } else if (scenario === 'silverbullet') {
+                benefitEl.innerText = "Days vs. Months";
+                deltaEl.innerText = "Metadata Config Rules";
+                descEl.innerText = "Substituted extensive custom endpoint integrations with dynamic, schema-driven configurations that reduced onboarding steps significantly.";
+            }
+        }
+
+        // Sandbox Tool 2: Simulated Model Context Protocol Outputs
+        function triggerMCPTool(toolType) {
+            const line1 = document.getElementById('mcpConsoleLine1');
+            const line2 = document.getElementById('mcpConsoleLine2');
+
+            line1.innerText = `[${new Date().toLocaleTimeString()}] Calling MCP Client...`;
+
+            if (toolType === 'cam') {
+                line2.innerText = `SUCCESS: Fetched target license parameters (Cognito authorization parity verified).`;
+            } else if (toolType === 'billing') {
+                line2.innerText = `SUCCESS: Resolved credit allocation pool models supporting billing tied to $100M+ ARR.`;
+            } else if (toolType === 'backup') {
+                line2.innerText = `SUCCESS: Listed active MSP profiles. Found 2,000+ active client tenants.`;
+            }
+        }
+    </script>
+</body>
+</html>
